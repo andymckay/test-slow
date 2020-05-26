@@ -1,0 +1,25 @@
+name: Slow CI
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+  repository_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Run a multi-line script
+      run: |
+        echo Start
+        echo sleep 1000
+        echo Tick 1
+        echo sleep 1000
+        echo Tick 2
+        echo sleep 1000
+        echo Tick 3
+        echo sleep 1000
+        echo Last tick
+        echo sleep 1000
