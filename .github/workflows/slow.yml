@@ -13,13 +13,14 @@ jobs:
     steps:
     - name: Run a multi-line script
       run: |
-        echo Start
-        echo sleep 1000
-        echo Tick 1
-        echo sleep 1000
-        echo Tick 2
-        echo sleep 1000
-        echo Tick 3
-        echo sleep 1000
-        echo Last tick
-        echo sleep 1000
+        echo Start, sleeping for two minutes.
+        python3 -c "from time import sleep; sleep(120)"
+        echo Slept for two minutes.
+        python3 -c "from time import sleep; sleep(120)"
+        echo Slept for two minutes.
+        python3 -c "from time import sleep; sleep(120)"
+        echo Slept for two minutes.
+        python3 -c "from time import sleep; sleep(120)"
+        echo Slept for two minutes. One more.
+        python3 -c "from time import sleep; sleep(120)"
+        echo Done.
